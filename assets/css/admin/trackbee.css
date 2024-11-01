@@ -1,0 +1,85 @@
+:root {
+  font-size: 15px;
+  --grey-background: rgba(249, 249, 249, 1);
+  --brand-b600: rgba(4, 14, 36, 1);
+  --neutrals-w50: rgba(255, 255, 255, 1);
+  --grey-g30: rgba(244, 244, 244, 1);
+  --grey-g50: rgba(234, 234, 234, 1);
+  --grey-g100: rgba(131, 131, 131, 1);
+  --yellow: rgba(254, 193, 25, 1);
+  --green-gr50: rgba(234, 246, 234, 1);
+  --green-gr100: rgba(132, 205, 130, 1);
+  --green-gr300: rgba(43, 169, 40, 1);
+  --red-r50: rgba(251, 233, 233, 1);
+  --red-r300: rgba(212, 31, 31, 1);
+}
+
+@font-face {
+  src: url("../../fonts/Inter-Regular.ttf");
+  font-family: Inter;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("../../fonts/Inter-Medium.ttf");
+  font-family: Inter;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("../../fonts/Inter-Bold.ttf");
+  font-family: Inter;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url("../../fonts/Inter-ExtraBold.ttf");
+  font-family: Inter;
+  font-weight: 800;
+}
+
+#wpcontent {
+  padding-left: 0 !important;
+  background-color: var(--grey-background);
+  background-image: url("../../images/honeycomb.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  height: calc(100vh - 32px);
+}
+
+#wpfooter {
+  display: none;
+}
+
+.trackbee-heading-1 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.trackbee-heading-2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.trackbee-heading-3 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.trackbee-paragraph-med {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.trackbee-text-mute {
+  color: var(--grey-g100);
+}
+
+.trackbee-page {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  color: var(--brand-b600);
+}

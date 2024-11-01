@@ -1,0 +1,248 @@
+#wpbody-content {
+  padding: 0;
+}
+
+.trackbee-dashboard-page {
+  display: flex;
+  background-color: var(--grey-background);
+  height: calc(100vh - 32px);
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+
+.trackbee-dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: var(--neutrals-w50);
+  border-bottom: 1px solid var(--grey-g50);
+  z-index: 100;
+}
+
+.trackbee-dashboard-title .trackbee-heading-1 {
+  padding: 0 2rem;
+}
+
+.trackbee-navigation {
+  width: 20%;
+  min-width: 264px;
+  background-color: var(--brand-b600);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 2rem 2rem;
+  z-index: 100;
+}
+
+.trackbee-nav {
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.trackbee-nav a.active {
+  border-left: 3px solid var(--yellow)
+}
+
+.trackbee-logo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.trackbee-nav .trackbee-nav-link {
+  color: var(--neutrals-w50);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trackbee-dashboard-content {
+  background-image: url("../../images/honeycomb.svg");
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
+  background-size: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trackbee-connected-state-wrapper {
+  height: 12rem;
+  padding: 4rem 0 0;
+  position: relative;
+}
+
+.trackbee-connected-state {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--green-gr300);
+  background-color: var(--green-gr50);
+  font-size: .75rem;
+  font-weight: 700;
+  border-radius: 3rem;
+  padding: .3rem .6rem;
+  z-index: 10;
+}
+
+.trackbee-connected-circle {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 100%;
+  box-shadow: 0px 28.2609px 44.1576px -24.7283px rgba(0, 0, 0, 0.37);
+}
+
+.trackbee-connected-circle:before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 200%;
+  height: 200%;
+  box-sizing: border-box;
+  margin-left: -50%;
+  margin-top: -50%;
+  border-radius: 100%;
+  background-color: var(--green-gr100);
+  -webkit-animation: pulse-ring 1.75s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+          animation: pulse-ring 1.75s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.trackbee-connected-circle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--neutrals-w50);
+  background-image: url("../../images/logo-small.svg");
+  background-position: 55% center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+ 
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.trackbee-overview-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 75%;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.trackbee-overview-wrapper__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem 1rem;
+  padding: 2rem;
+  background-color: var(--neutrals-w50);
+  border-radius: .25rem;
+  flex-wrap: wrap;
+}
+
+.trackbee-overview-wrapper__content__item {
+  min-width: 248px;
+}
+
+.trackbee-overview-wrapper__content__item__data {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.trackbee-overview-wrapper__content__item__data__text {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.trackbee-overview-wrapper__content__item__data__icon {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid var(--yellow);
+  padding: .25rem .5rem;
+}
+
+.trackbee-overview-wrapper__content__item__change {
+  display: flex;
+  margin-top: 1rem;
+  gap: .5rem;
+  align-items: center;
+}
+
+.trackbee-overview-wrapper__content__item__change .trackbee-change__label {
+  font-size: .75rem;
+  font-weight: 800;
+  padding: 0 .5rem;
+  border-radius: .25rem;
+}
+
+.trackbee-overview-wrapper__content__item__change .change__positive {
+  color: var(--green-gr300);
+  background-color: var(--green-gr50);
+}
+
+.trackbee-overview-wrapper__content__item__change .change__negative {
+  color: var(--red-r300);
+  background-color: var(--red-r50);
+}
+
+.trackbee-overview-wrapper__content__item__change .change__neutral {
+  color: var(--grey-g300);
+  background-color: var(--grey-g50);
+}

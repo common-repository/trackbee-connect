@@ -1,0 +1,162 @@
+.trackbee-header {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.trackbee-header > h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.trackbee-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackbee-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 60px);
+  padding: 7vh 15% 0 15%;
+}
+
+.trackbee-card {
+  margin-top: 1.75rem;
+  background-color: var(--neutrals-w50);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+}
+
+.trackbee-columns {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  .trackbee-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trackbee-column {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.trackbee-column > svg {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.trackbee-input-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.trackbee-input {
+  border: 1px solid var(--grey-g50)!important;
+  border-radius: 4px;
+  padding: 0.75rem 0.75rem;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.trackbee-input:focus {
+  outline: 1px solid var(--brand-b600) !important;
+}
+
+.trackbee-input:placeholder {
+  color: var(--grey-g100);
+}
+
+.trackbee-submit-button {
+  background-color: var(--brand-b600);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  align-self: flex-end;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.trackbee-submit-button:disabled {
+  background-color: var(--grey-g50);
+  cursor: default;
+}
+
+.trackbee-submit-text {
+  color: var(--neutrals-w50);
+}
+
+.trackbee-button-loading {
+  background-color: rgba(131, 131, 131, 0.5);
+}
+
+.trackbee-button-loading .trackbee-submit-text {
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.trackbee-button-loading::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: var(--neutrals-w50);
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+.trackbee-instructions {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--grey-g30);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.trackbee-warning {
+  margin-top: 1rem;
+  color: var(--red-r300);
+  background-color: var(--red-r50);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: .5rem 1rem;
+  border-radius: 0.75rem;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
